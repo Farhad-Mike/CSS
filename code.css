@@ -1,0 +1,7 @@
+h1:hover{}
+li:first-child{}
+li:last-child{}
+li:nth-child(n){}   /* Вместо n указать какой по счету */
+li:only-child{}     /* Только у кого один всего li */
+a:link{}            /* Default style for link */
+a:visited{}         /* After visit the link */
