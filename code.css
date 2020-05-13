@@ -5,3 +5,13 @@ li:nth-child(n){}   /* Вместо n указать какой по счету 
 li:only-child{}     /* Только у кого один всего li */
 a:link{}            /* Default style for link */
 a:visited{}         /* After visit the link */
+h1 + a{}            /* 'a' селектор после h1 (рядом с h1)*/
+textarea ~ button{} /* Каждый button после textarea с одинаковым радителем для обоих */
+ul > li{}           /* All li elements inside ul (one deep level) */
+ul li{}             /* All li elements inside ul (recursively) */
+img[class=val]{}    /* Select by attribute */
+img[class^=val]{}   /* Select by attribute that starts with 'val' */
+img[class$=val]{}   /* Select by attribute that ends with 'val' */
+img[class*=val]{}   /* Select by attribute that contain with 'val' */
+img[class~=val]{}   /* Select by attribute that contain 'val' with whitespace */
+img[class!=val]{}   /* Select by attribute that starts with 'val' (I don't understand why it is use) */
