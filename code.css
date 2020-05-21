@@ -15,3 +15,4 @@ img[class$=val]{}   /* Select by attribute that ends with 'val' */
 img[class*=val]{}   /* Select by attribute that contain with 'val' */
 img[class~=val]{}   /* Select by attribute that contain 'val' with whitespace */
 img[class!=val]{}   /* Select by attribute that starts with 'val' (I don't understand why it is use) */
+Margin is the space between the border and all other content
