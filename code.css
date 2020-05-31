@@ -17,3 +17,6 @@ img[class~=val]{}   /* Select by attribute that contain 'val' with whitespace */
 img[class!=val]{}   /* Select by attribute that starts with 'val' (I don't understand why it is use) */
 p{font-size: mm, cm, px, pt, pc, em, vw, vh;}   /* vw - view width (%), vh - view height (%), pt - point (bigger than px), pc (bigger than pt) */
 p{text-align: justify;}
+Margin is the space between the border and all other content
+/* PNG images are opacities */
+box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, .5); /* Если сделать сзади картинки PNG то получается 3D эффект */
