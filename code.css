@@ -15,3 +15,5 @@ img[class$=val]{}   /* Select by attribute that ends with 'val' */
 img[class*=val]{}   /* Select by attribute that contain with 'val' */
 img[class~=val]{}   /* Select by attribute that contain 'val' with whitespace */
 img[class!=val]{}   /* Select by attribute that starts with 'val' (I don't understand why it is use) */
+p{font-size: mm, cm, px, pt, pc, em, vw, vh;}   /* vw - view width (%), vh - view height (%), pt - point (bigger than px), pc (bigger than pt) */
+p{text-align: justify;}
