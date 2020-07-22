@@ -20,3 +20,16 @@ p{text-align: justify;}
 Margin is the space between the border and all other content
 /* PNG images are opacities */
 box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, .5); /* Если сделать сзади картинки PNG то получается 3D эффект */
+
+
+/* HOW CREATE VARIABLE */
+
+:root {
+    --primary-color: #fff;
+    --access-color: #eee;
+    --font-color: #ddd;
+}
+
+div {
+    background-color: var(--primary-color)
+}

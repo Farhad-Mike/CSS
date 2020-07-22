@@ -1,0 +1,113 @@
+// IMPORT
+
+@import './resets'; // import from _reset.scss
+
+// CREATE VARIABLE
+
+$primary-color: #fff;
+$access-color: #eee;
+$font-color: #ddd;
+
+div {
+    background-color: $primary-color;
+}
+
+// CREATE MAP
+
+$font-color: (
+    'first': #f00,
+    'second': #0f0,
+    'last': #00f
+);
+
+div {
+    color: map-get($font-color, first);
+}
+
+// NEST
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+
+    #{&}__paragraph {   // .main .main__paragraph
+        color: map-get($font-color, first);
+
+        &:hover {       // .main .main__paragraph:hover
+            color: map-get($font-color, second);
+        }
+    }
+}
+
+// CREATE FUNCTION
+
+@function get-color($var) {
+    @return map-get($font-color, $var)
+};
+
+div {
+    color: get-color(first);
+}
+
+// MIXIN 1
+
+@mixin center($direction) {         // Можно использовать mixin без переменной, для этого даже не нужно использовать скобки ()
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;     // optionally 
+
+div {
+    @include center(column-reverse);    // brackets is optionally
+
+    p {
+        color: red;
+    }
+}
+
+// MIXIN 2
+
+@mixin bg-light($light: true) {         // Set default value $light: true 
+    @if $light {
+        background-color: white;
+        color: black;
+    };
+}
+
+div {
+    @include bg-light(true);
+}
+
+// MiXIN MEDIA
+
+@mixin mobile {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+div {
+    @include mobile {
+        background-color: black;
+        color: white;
+    }
+}
+
+// EXTEND FROM ONE CLASS TO ANOTHER 
+
+section {
+    width: 40%;
+    height: 250px;
+    background-color: $primary;
+}
+
+div {
+    @extend section;                // The div will get all prop from <section>
+    background-color: $warning;
+}
+
+// CALCULATION
+
+div {
+    width: 80% - 40%; 
+}
