@@ -56,6 +56,7 @@ div {
     justify-content: center;
     align-items: center;
     flex-direction: $direction;     // optionally 
+}
 
 div {
     @include center(column-reverse);    // brackets is optionally
